@@ -66,7 +66,7 @@ const WorkersList = ({ onClose }) => {
   async function getWorkersList() {
     try {
       const response = await axios.post(
-        "http://bricolat.free.nf/admin/getWorkersList.php",
+        "https://bricolat.free.nf/admin/getWorkersList.php",
         {
           searchTerm,
           filter,
@@ -94,7 +94,7 @@ const WorkersList = ({ onClose }) => {
     if (response) {
       axios
         .get(
-          `http://bricolat.free.nf/admin/deletWorker.php?workerID=${workerID}`,
+          `https://bricolat.free.nf/admin/deletWorker.php?workerID=${workerID}`,
           { withCredentials: true }
         )
         .then((response) => {
@@ -232,7 +232,7 @@ function ClientsList({ onClose }) {
   async function getClientsList() {
     try {
       const response = await axios.post(
-        "http://bricolat.free.nf/admin/getClientsList.php",
+        "https://bricolat.free.nf/admin/getClientsList.php",
         {
           searchTerm,
           filter,
@@ -362,7 +362,7 @@ function Users() {
   const [chartData, setChartData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://bricolat.free.nf/admin/getWorkerAndClientsNumber.php", {
+      .get("https://bricolat.free.nf/admin/getWorkerAndClientsNumber.php", {
         withCredentials: true,
       })
       .then((response) => {

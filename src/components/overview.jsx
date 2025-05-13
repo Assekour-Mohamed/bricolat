@@ -26,7 +26,7 @@ function LastUsersList() {
 
   useEffect(() => {
     axios
-      .get("http://bricolat.free.nf/admin/getLastMonthUsers.php", {
+      .get("https://bricolat.free.nf/admin/getLastMonthUsers.php", {
         withCredentials: true,
       })
       .then((response) => {
@@ -132,7 +132,7 @@ function LastPostsList() {
 
   useEffect(() => {
     axios
-      .get("http://bricolat.free.nf/admin/getLastPosts.php", {
+      .get("https://bricolat.free.nf/admin/getLastPosts.php", {
         withCredentials: true,
       })
       .then((response) => {
@@ -215,7 +215,7 @@ function Overview() {
 
   useEffect(() => {
     axios
-      .get("http://bricolat.free.nf/admin/getOverviewInfo.php", {
+      .get("https://bricolat.free.nf/admin/getOverviewInfo.php", {
         withCredentials: true,
       })
       .then((response) => {

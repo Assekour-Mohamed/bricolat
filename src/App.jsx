@@ -9,7 +9,7 @@ function App() {
   const [currentAdmin, setCurrentAdmin] = useState(null);
   const handleLogout = () => {
     axios
-      .get("http://bricolat.free.nf/admin/logout.php", {
+      .get("https://bricolat.free.nf/admin/logout.php", {
         withCredentials: true,
       })
       .then(() => {

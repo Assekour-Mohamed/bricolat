@@ -26,9 +26,12 @@ import { MapPin, Mail, Link as LinkIcon } from "lucide-react";
 function Review({ onDelete, id, image, name, comment, stars, date }) {
   function handelDeleteBtn() {
     axios
-      .delete(`http://bricolat.free.nf/admin/deleteReview.php?reviewID=${id}`, {
-        withCredentials: true,
-      })
+      .delete(
+        `https://bricolat.free.nf/admin/deleteReview.php?reviewID=${id}`,
+        {
+          withCredentials: true,
+        }
+      )
       .then((response) => {
         console.log("review deleted successfully", response.data);
         onDelete();
@@ -173,7 +176,7 @@ const UpdateProfileForm = ({ OldData, onSubmit, onClose }) => {
     document.body.style.overflow = "hidden";
 
     axios
-      .get(`http://bricolat.free.nf/admin/getJobCategoriesList.php`, {
+      .get(`https://bricolat.free.nf/admin/getJobCategoriesList.php`, {
         withCredentials: true,
       })
       .then((response) => {
@@ -541,7 +544,7 @@ const WorkerProfile = () => {
 
       try {
         const response = await axios.post(
-          `http://bricolat.free.nf/admin/updateWorkerInfo.php?workerID=${workerID}`,
+          `https://bricolat.free.nf/admin/updateWorkerInfo.php?workerID=${workerID}`,
           formData,
           {
             headers: {
@@ -572,7 +575,7 @@ const WorkerProfile = () => {
   const getWorkerInfo = async () => {
     try {
       const response = await axios.get(
-        `http://bricolat.free.nf/admin/getWorkerInfo.php?workerID=${workerID}`,
+        `https://bricolat.free.nf/admin/getWorkerInfo.php?workerID=${workerID}`,
         { withCredentials: true }
       );
       return response.data; // Return the data from the response

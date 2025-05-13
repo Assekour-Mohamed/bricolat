@@ -21,7 +21,7 @@ function Header({ admin, onLogout }) {
   const loadNotifications = async () => {
     try {
       const response = await axios.get(
-        `http://bricolat.free.nf/admin/getNotifications.php?adminID=${admin.adminId}`,
+        `https://bricolat.free.nf/admin/getNotifications.php?adminID=${admin.adminId}`,
         { withCredentials: true }
       );
       setNotifications(response.data);

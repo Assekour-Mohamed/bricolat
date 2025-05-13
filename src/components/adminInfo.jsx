@@ -60,7 +60,7 @@ const AdminInfo = ({ admin }) => {
     }
     try {
       const response = await axios.post(
-        `http://bricolat.free.nf/admin/updateAdminInfo.php?adminID=${admin.adminId}`,
+        `https://bricolat.free.nf/admin/updateAdminInfo.php?adminID=${admin.adminId}`,
         updatedData,
         {
           withCredentials: true,

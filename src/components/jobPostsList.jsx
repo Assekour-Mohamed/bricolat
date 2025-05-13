@@ -20,7 +20,7 @@ export default function AdminJobPosts() {
     const fetchData = async () => {
       try {
         const res = await axios.post(
-          "http://bricolat.free.nf/admin/getJobPostsList.php",
+          "https://bricolat.free.nf/admin/getJobPostsList.php",
           {
             searchTerm,
             filter,
@@ -45,7 +45,7 @@ export default function AdminJobPosts() {
     ) {
       try {
         await axios.delete(
-          `http://bricolat.free.nf/admin/deleteJobPost.php?id=${id}`,
+          `https://bricolat.free.nf/admin/deleteJobPost.php?id=${id}`,
           {
             withCredentials: true,
           }

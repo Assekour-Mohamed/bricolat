@@ -19,7 +19,7 @@ const AdminLogin = ({ onSubmit }) => {
 
     try {
       const response = await axios.post(
-        "http://bricolat.free.nf/admin/adminLogin.php",
+        "https://bricolat.free.nf/admin/adminLogin.php",
         formData,
         {
           headers: {

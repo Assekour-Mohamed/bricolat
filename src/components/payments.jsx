@@ -11,7 +11,7 @@ const Payment = () => {
   async function getPaymentsList() {
     try {
       const response = await axios.post(
-        "http://bricolat.free.nf/admin/getPaymentsList.php",
+        "https://bricolat.free.nf/admin/getPaymentsList.php",
         {
           searchTerm,
           filter,
